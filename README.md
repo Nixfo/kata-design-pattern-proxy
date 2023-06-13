@@ -9,7 +9,5 @@ In a second time, we want to restrict the access of a `Contract` only if the `Co
 the end date is before today.
 Implements the pattern Proxy to restrict the access of the resource according to this rule.
 
-Solve the tests under the package test using the Memento pattern.
-
 ## Solution
 Solution is under the package solution. Classes under this package are prefixed with the symbol ɵ to disable IDE autocompletion.
