@@ -9,9 +9,9 @@ public class ɵContractServiceProxyCache implements ɵContractService {
     private ɵContractService contractService;
     private Map<Long, Contract> contractCache;
 
-    public ɵContractServiceProxyCache(ɵContractService contractService) {
+    public ɵContractServiceProxyCache() {
         this.contractCache = new HashMap<>();
-        this.contractService = contractService;
+        this.contractService = new ɵContractServiceDatabase();
     }
 
     @Override

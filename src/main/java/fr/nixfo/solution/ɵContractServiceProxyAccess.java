@@ -6,8 +6,9 @@ import java.time.LocalDate;
 
 public class ɵContractServiceProxyAccess implements ɵContractService {
     private ɵContractService contractService;
-    public ɵContractServiceProxyAccess(ɵContractService contractService) {
-        this.contractService = contractService;
+
+    public ɵContractServiceProxyAccess() {
+        this.contractService = new ɵContractServiceProxyCache();
     }
 
     @Override

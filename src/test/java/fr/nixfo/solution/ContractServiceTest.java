@@ -9,7 +9,7 @@ class ContractServiceTest {
 
     @Test
     void should_respond_quick_second_time_with_cache() {
-        ɵContractService contractService = new ɵContractServiceProxyCache(new ɵContractServiceDatabase());
+        ɵContractService contractService = new ɵContractServiceProxyCache();
 
         contractService.getContractByNumber(1L);
 
@@ -24,7 +24,7 @@ class ContractServiceTest {
 
     @Test
     void should_restrict_access_to_expired_contract() {
-        ɵContractService contractService = new ɵContractServiceProxyAccess(new ɵContractServiceDatabase());
+        ɵContractService contractService = new ɵContractServiceProxyAccess();
 
         assertThrows(RuntimeException.class, () -> contractService.getContractByNumber(2L));
     }
