@@ -27,4 +27,11 @@ class ContractServiceTest {
 
         assertThrows(RuntimeException.class, () -> contractService.getContractByNumber(2L));
     }
+
+    @Test
+    void should_not_restrict_access_to_ongoing_contract() {
+        ContractService contractService = new ContractService();
+
+        assertDoesNotThrow(() -> contractService.getContractByNumber(1L));
+    }
 }

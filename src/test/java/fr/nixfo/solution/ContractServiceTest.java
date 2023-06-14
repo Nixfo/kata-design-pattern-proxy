@@ -2,8 +2,7 @@ package fr.nixfo.solution;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class ContractServiceTest {
 
@@ -27,5 +26,12 @@ class ContractServiceTest {
         ɵContractService contractService = new ɵContractServiceProxyAccess();
 
         assertThrows(RuntimeException.class, () -> contractService.getContractByNumber(2L));
+    }
+
+    @Test
+    void should_not_restrict_access_to_ongoing_contract() {
+        ɵContractService contractService = new ɵContractServiceProxyAccess();
+
+        assertDoesNotThrow(() -> contractService.getContractByNumber(1L));
     }
 }
