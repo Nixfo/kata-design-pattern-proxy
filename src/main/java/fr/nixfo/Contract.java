@@ -3,13 +3,13 @@ package fr.nixfo;
 import java.time.LocalDate;
 
 public class Contract {
-    private long number;
-    private String status;
-    private LocalDate startDate;
-    private LocalDate endDate;
-    private String holder;
-    private String type;
-    private String version;
+    private final long number;
+    private final String status;
+    private final LocalDate startDate;
+    private final LocalDate endDate;
+    private final String holder;
+    private final String type;
+    private final String version;
 
     public Contract(long number, String status, LocalDate startDate, LocalDate endDate, String holder, String type, String version) {
         this.number = number;

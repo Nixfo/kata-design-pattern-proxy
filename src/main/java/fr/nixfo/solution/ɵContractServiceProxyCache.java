@@ -6,8 +6,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ɵContractServiceProxyCache implements ɵContractService {
-    private ɵContractService contractService;
-    private Map<Long, Contract> contractCache;
+    private final ɵContractService contractService;
+    private final Map<Long, Contract> contractCache;
 
     public ɵContractServiceProxyCache() {
         this.contractCache = new HashMap<>();

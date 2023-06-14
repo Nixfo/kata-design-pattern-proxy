@@ -5,7 +5,7 @@ import fr.nixfo.Contract;
 import java.time.LocalDate;
 
 public class ɵContractServiceProxyAccess implements ɵContractService {
-    private ɵContractService contractService;
+    private final ɵContractService contractService;
 
     public ɵContractServiceProxyAccess() {
         this.contractService = new ɵContractServiceProxyCache();
